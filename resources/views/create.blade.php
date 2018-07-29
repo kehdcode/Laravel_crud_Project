@@ -4,9 +4,20 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-<form class="form-horizontal">
+
+    {!! Form::open(['url' => 'create/submit']) !!}
+    <fieldset>
+    <legend>Laravel CRUD System</legend>
+    <div class="form-group">
+        {{Form::label('email', 'E-Mail Address', ['class' => 'col-lg-2']);}}
+    </div>
+    <fieldset>
+    {!! Form::close() !!}
+
+
+<!--<form class="form-horizontal">
   <fieldset>
-    <legend>Legend</legend>
+    <legend>Laravel CRUD System</legend>
     <div class="form-group">
       <label for="inputEmail" class="col-lg-2 control-label">Email</label>
       <div class="col-lg-10">
@@ -31,7 +42,7 @@
       </div>
     </div>
   </fieldset>
-</form>
+</form>-->
 
 
 </div>
