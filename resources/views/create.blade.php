@@ -3,16 +3,28 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
 
     {!! Form::open(['url' => 'create/submit']) !!}
     <fieldset>
     <legend>Laravel CRUD System</legend>
     <div class="form-group">
-        {{Form::label('title', 'Title', ['class' => 'col-lg-2 control-label']);}}
-        <div class="col-lg-10">
+        {{Form::label('title', 'Title')}}
+        {{Form::text('title', '',['class' => 'form-control'])}}
     </div>
-    <fieldset>
+
+    <div class="form-group">
+        {{Form::label('description', 'Description')}}
+        {{Form::textarea('description', '',['class' => 'form-control'])}}
+    </div>
+
+
+    </div>
+    </div>
+</div>
+
+    
+</fieldset>
     {!! Form::close() !!}
 
 
