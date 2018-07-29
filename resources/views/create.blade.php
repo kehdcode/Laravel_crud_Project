@@ -9,7 +9,8 @@
     <fieldset>
     <legend>Laravel CRUD System</legend>
     <div class="form-group">
-        {{Form::label('email', 'E-Mail Address', ['class' => 'col-lg-2']);}}
+        {{Form::label('title', 'Title', ['class' => 'col-lg-2 control-label']);}}
+        <div class="col-lg-10">
     </div>
     <fieldset>
     {!! Form::close() !!}
