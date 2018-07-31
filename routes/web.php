@@ -11,13 +11,13 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('home');
-});
+});*/
 
 Route::get('/create', function () {
     return view('create');
 });
 
-Route ::post('create/submit', 'MessagesController@submit');
+Route ::get('/', 'MessagesController@submit');
 
