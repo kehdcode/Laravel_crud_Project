@@ -19,5 +19,9 @@ Route::get('/create', function () {
     return view('create');
 });
 
-Route ::get('/', 'MessagesController@submit');
+Route::post('create/submit', 'MessagesController@submit');
+
+Route::get('/', 'MessagesController@getArticle');
+
+
 

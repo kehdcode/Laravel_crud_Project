@@ -4,27 +4,38 @@
 <div class="container">
     <div class="row">
     <legend>Laravel CRUD System</legend>
+      @if(session('success'))
+      <p class="alert alert-success">
+      {{session('success')}}
+      </p>
+      @endif
         <table class="table table-striped table-hover ">
   <thead>
     <tr>
       <th>ID</th>
-      <th>Title</th>
-      <th>description</th>
-      <th>Action</th>
+      <th>TITLE</th>
+      <th>DESCRIPTION</th>
+      
+      <th>TIME POSTED</th>
+      <th>ACTION</th>
     </tr>
   </thead>
   <tbody>
+  @if(count($messages) > 0)
+    @foreach($messages as $message)
     <tr>
-      <td>1</td>
-      <td>Column content</td>
-      <td>Column content</td>
+      <td>{{$message->id}}</td>
+      <td>{{$message->title}}</td>
+      <td>{{$message->description}}</td>
+      <td>{{$message->created_at}} </td>
       <td>
           <a href="" class="label label-primary">Read</a>|
           <a href="" class="label label-success">Update</a>|
           <a href="" class="label label-danger">Delete</a>
       </td>
     </tr>
-    
+    @endforeach
+  @endif
   </tbody>
 </table> 
     </div>
