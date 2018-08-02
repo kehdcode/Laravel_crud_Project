@@ -29,9 +29,9 @@
       <td>{{$message->description}}</td>
       <td>{{$message->created_at}} </td>
       <td>
-          <a href="" class="label label-primary">Read</a>|
-          <a href="" class="label label-success">Update</a>|
-          <a href="" class="label label-danger">Delete</a>
+          <a href="{{ url('/read')}}" class="label label-primary">Read</a>|
+          <a href='{{ url("/update/{$message->id}") }}' class="label label-success">Update</a>|
+          <a href="{{ url('')}}" class="label label-danger">Delete</a>
       </td>
     </tr>
     @endforeach

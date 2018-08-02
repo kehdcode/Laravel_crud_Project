@@ -19,9 +19,19 @@ Route::get('/create', function () {
     return view('create');
 });
 
+Route::get('/read', function () {
+    return view('read');
+});
+
+//To Post Input into database
 Route::post('create/submit', 'MessagesController@submit');
 
+//To retrieve data
 Route::get('/', 'MessagesController@getArticle');
+
+//To Update data
+Route::get('/update/{id}', 'MessagesController@update');
+
 
 
 

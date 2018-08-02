@@ -8,13 +8,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">LARAVEL CRUD SYSTEM</a>
+      <a class="navbar-brand" href="{{ url('/')}}">LARAVEL CRUD SYSTEM</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/home.blade.php">HOME <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">CREATE</a></li>
+        <li class="active"><a href="{{ url('/')}}">HOME <span class="sr-only">(current)</span></a></li>
+        <li><a href="{{ url('/create')}}">CREATE</a></li>
         
            
       </ul>

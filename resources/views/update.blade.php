@@ -20,12 +20,12 @@
  
     <div class="form-group">
         {{Form::label('title', 'Title')}}
-        {{Form::text('title', '',['class' => 'form-control'])}}
+        {{Form::text('title', $messages->title,['class' => 'form-control'])}}
     </div>
 
     <div class="form-group">
         {{Form::label('description', 'Description')}}
-        {{Form::textarea('description', '',['class' => 'form-control'])}}
+        {{Form::textarea('description', $messages->description,['class' => 'form-control'])}}
     </div>
 
      <div >

@@ -7,6 +7,7 @@ use App\Article;
 
 class MessagesController extends Controller
 {
+    //To Get Input and Save into Database
     public function submit(Request $request){
         $this-> validate($request , [
             'title' => 'required',
@@ -21,9 +22,14 @@ class MessagesController extends Controller
        //To Redirect
        return redirect('/')-> with('success', 'Article has been sent');
     }
-
+//To retrieve articles
     public function getArticle(){
         $messages = Article::all();
         return view('home')-> with('messages', $messages);
+    }
+
+    public function update($id){
+        $messages = Article::find($id);
+        return view('update')-> with('messages', $messages);
     }
 }
