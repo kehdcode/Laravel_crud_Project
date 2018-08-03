@@ -13,8 +13,8 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="{{ url('/')}}">HOME <span class="sr-only">(current)</span></a></li>
-        <li><a href="{{ url('/create')}}">CREATE</a></li>
+        <li class="{{Request::is('/') ? 'active' : ''}}"><a href="{{ url('/')}}">HOME <span class="sr-only">(current)</span></a></li>
+        <li class="{{Request::is('create') ? 'active' : ''}}"><a href="{{ url('/create')}}">CREATE</a></li>
         
            
       </ul>

@@ -32,4 +32,33 @@ class MessagesController extends Controller
         $messages = Article::find($id);
         return view('update')-> with('messages', $messages);
     }
+    public function edit(Request $request, $id){
+        $this-> validate($request , [
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+        $data = array (
+            'title' =>$request->input('title'),
+            'description' =>$request->input('description')
+        );
+      Article::where('id', $id)->update($data);
+
+     
+       return redirect('/')-> with('success', 'Article has been successfully updated');
+    }
+    //Read Function
+    public function read($id){
+        $messages = Article::find($id);
+        return view('read')-> with('messages', $messages);
+
+    }
+
+    public function delete($id){
+        Article::where('id', $id)->delete();
+        return redirect('/')-> with('success', 'Article has been successfully Deleted');
+
+       
+
+    }
 }
+
